@@ -1,0 +1,28 @@
+<h2>Bài 18 - Json Array Model - Group Customers</h2>
+
+<p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+
+<div class="group" *ngFor="let g of groups">
+  <h3>{{ g.CustomterTypeName }} (CustomerTypeId: {{ g.CustomerTypeId }})</h3>
+
+  <table border="1">
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Email</td>
+      <td>Age</td>
+      <td>Avatar</td>
+    </tr>
+    <tbody *ngFor="let c of g.Customers">
+      <tr>
+        <td>{{ c.Id }}</td>
+        <td>{{ c.Name }}</td>
+        <td>{{ c.Email }}</td>
+        <td>{{ c.Age }}</td>
+        <td>
+          <img [src]="c.Image" width="50" height="50" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

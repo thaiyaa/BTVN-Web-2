@@ -1,0 +1,10 @@
+.group {
+  margin-bottom: 24px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+img {
+  border-radius: 50%;
+  object-fit: cover;
+}
